@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PreceptDef[defName="IdeoDiversity_Abhorrent"]/comps</xpath>
+		<value>
+			<li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+				<internalOffset>-20</internalOffset>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PreceptDef[defName="IdeoDiversity_Horrible"]/comps</xpath>
+		<value>
+			<li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+				<internalOffset>-10</internalOffset>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PreceptDef[defName="IdeoDiversity_Disapproved"]/comps</xpath>
+		<value>
+			<li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+				<internalOffset>-5</internalOffset>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThoughtDef[defName="IdeoDiversity_Abhorrent_Social" or defName="IdeoDiversity_Horrible_Social" or defName="IdeoDiversity_Disapproved_Social"]/thoughtClass</xpath>
+		<value>
+			<thoughtClass>EnhancedBeliefsInteractions.Thought_DiversitySocial</thoughtClass>
+		</value>
+	</Operation>
+
+</Patch>

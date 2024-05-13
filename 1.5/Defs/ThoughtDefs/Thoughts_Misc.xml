@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThoughtDef>
+        <defName>EBI_PawnResearching_Abhorrent</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>EnhancedBeliefsInteractions.ThoughtWorker_Precept_PawnResearching</workerClass>
+        <stackLimit>12</stackLimit>
+        <stages>
+            <li>
+                <label>ongoing research</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>-6</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_PawnResearching_Horrible</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>EnhancedBeliefsInteractions.ThoughtWorker_Precept_PawnResearching</workerClass>
+        <stackLimit>12</stackLimit>
+        <stages>
+            <li>
+                <label>ongoing research</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>-4</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_PawnResearching_Disapproved</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>EnhancedBeliefsInteractions.ThoughtWorker_Precept_PawnResearching</workerClass>
+        <stackLimit>12</stackLimit>
+        <stages>
+            <li>
+                <label>ongoing research</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>-2</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_PawnResearching_Approved</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>EnhancedBeliefsInteractions.ThoughtWorker_Precept_PawnResearching</workerClass>
+        <stackLimit>12</stackLimit>
+        <stages>
+            <li>
+                <label>ongoing research</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>2</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_PawnResearching_Desired</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>EnhancedBeliefsInteractions.ThoughtWorker_Precept_PawnResearching</workerClass>
+        <stackLimit>12</stackLimit>
+        <stages>
+            <li>
+                <label>ongoing research</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>4</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_Intellectual_Abhorrent_Social</defName>
+        <thoughtClass>EnhancedBeliefsInteractions.Thought_SituationalSocial_Research</thoughtClass>
+        <workerClass>EnhancedBeliefsInteractions.ThoughtWorker_Precept_Research_Social</workerClass>
+        <stages>
+            <li>
+                <label>PLACEHOLDER - Stupider</label>
+                <baseOpinionOffset>3</baseOpinionOffset>
+            </li>
+            <li>
+                <visible>false</visible>
+            </li>
+            <li>
+                <label>PLACEHOLDER - Smarter</label>
+                <baseOpinionOffset>-3</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_Intellectual_Horrible_Social</defName>
+        <thoughtClass>EnhancedBeliefsInteractions.Thought_SituationalSocial_Research</thoughtClass>
+        <workerClass>EnhancedBeliefsInteractions.ThoughtWorker_Precept_Research_Social</workerClass>
+        <stages>
+            <li>
+                <label>PLACEHOLDER - Stupider</label>
+                <baseOpinionOffset>2</baseOpinionOffset>
+            </li>
+            <li>
+                <visible>false</visible>
+            </li>
+            <li>
+                <label>PLACEHOLDER - Smarter</label>
+                <baseOpinionOffset>-2</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_Intellectual_Disapproved_Social</defName>
+        <thoughtClass>EnhancedBeliefsInteractions.Thought_SituationalSocial_Research</thoughtClass>
+        <workerClass>EnhancedBeliefsInteractions.ThoughtWorker_Precept_Research_Social</workerClass>
+        <stages>
+            <li>
+                <label>PLACEHOLDER - Stupider</label>
+                <baseOpinionOffset>1</baseOpinionOffset>
+            </li>
+            <li>
+                <visible>false</visible>
+            </li>
+            <li>
+                <label>PLACEHOLDER - Smarter</label>
+                <baseOpinionOffset>-1</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_Intellectual_Approved_Social</defName>
+        <thoughtClass>EnhancedBeliefsInteractions.Thought_SituationalSocial_Research</thoughtClass>
+        <workerClass>EnhancedBeliefsInteractions.ThoughtWorker_Precept_Research_Social</workerClass>
+        <stages>
+            <li>
+                <label>PLACEHOLDER - Stupider</label>
+                <baseOpinionOffset>-1</baseOpinionOffset>
+            </li>
+            <li>
+                <visible>false</visible>
+            </li>
+            <li>
+                <label>PLACEHOLDER - Smarter</label>
+                <baseOpinionOffset>1</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_Intellectual_Desired_Social</defName>
+        <thoughtClass>EnhancedBeliefsInteractions.Thought_SituationalSocial_Research</thoughtClass>
+        <workerClass>EnhancedBeliefsInteractions.ThoughtWorker_Precept_Research_Social</workerClass>
+        <stages>
+            <li>
+                <label>PLACEHOLDER - Stupider</label>
+                <baseOpinionOffset>-2</baseOpinionOffset>
+            </li>
+            <li>
+                <visible>false</visible>
+            </li>
+            <li>
+                <label>PLACEHOLDER - Smarter</label>
+                <baseOpinionOffset>2</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_NoOngoingResearch_Abhorrent</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>EnhancedBeliefsInteractions.ThoughtWorker_Precept_NoOngoingResearch</workerClass>
+        <stages>
+            <li>
+                <label>no ongoing research</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>15</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_NoOngoingResearch_Horrible</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>EnhancedBeliefsInteractions.ThoughtWorker_Precept_NoOngoingResearch</workerClass>
+        <stages>
+            <li>
+                <label>no ongoing research</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_NoOngoingResearch_Disapproved</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>EnhancedBeliefsInteractions.ThoughtWorker_Precept_NoOngoingResearch</workerClass>
+        <stages>
+            <li>
+                <label>no ongoing research</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_NoOngoingResearch_Approved</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>EnhancedBeliefsInteractions.ThoughtWorker_Precept_NoOngoingResearch</workerClass>
+        <stages>
+            <li>
+                <label>no ongoing research</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_NoOngoingResearch_Desired</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>EnhancedBeliefsInteractions.ThoughtWorker_Precept_NoOngoingResearch</workerClass>
+        <stages>
+            <li>
+                <label>no ongoing research</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>-20</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_ResearchTooSlow_Approved</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>EnhancedBeliefsInteractions.ThoughtWorker_Precept_ResearchTooSlow</workerClass>
+        <stages>
+            <li>
+                <label>research too slow</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_ResearchTooSlow_Desired</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>EnhancedBeliefsInteractions.ThoughtWorker_Precept_ResearchTooSlow</workerClass>
+        <stages>
+            <li>
+                <label>research too slow</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_ResearchCompleted_Abhorrent</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <durationDays>3</durationDays>
+        <stages>
+            <li>
+                <label>research completed</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+            <li>
+                <label>research completed</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>-15</baseMoodEffect>
+            </li>
+            <li>
+                <label>research completed</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>-20</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_ResearchCompleted_Horrible</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <durationDays>3</durationDays>
+        <stages>
+            <li>
+                <label>research completed</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+            <li>
+                <label>research completed</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+            <li>
+                <label>research completed</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>-15</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_ResearchCompleted_Disapproved</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <durationDays>3</durationDays>
+        <stages>
+            <li>
+                <label>research completed</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>-2</baseMoodEffect>
+            </li>
+            <li>
+                <label>research completed</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>-6</baseMoodEffect>
+            </li>
+            <li>
+                <label>research completed</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>-9</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_ResearchCompleted_Approved</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <durationDays>3</durationDays>
+        <stages>
+            <li>
+                <label>research completed</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>3</baseMoodEffect>
+            </li>
+            <li>
+                <label>research completed</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>6</baseMoodEffect>
+            </li>
+            <li>
+                <label>research completed</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>9</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_ResearchCompleted_Desired</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <durationDays>3</durationDays>
+        <stages>
+            <li>
+                <label>research completed</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+            <li>
+                <label>research completed</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>10</baseMoodEffect>
+            </li>
+            <li>
+                <label>research completed</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>15</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_AllResearchFinished_Approved</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>EnhancedBeliefsInteractions.ThoughtWorker_Precept_AllResearchFinished</workerClass>
+        <stages>
+            <li>
+                <label>all research finished</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>EBI_AllResearchFinished_Desired</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>EnhancedBeliefsInteractions.ThoughtWorker_Precept_AllResearchFinished</workerClass>
+        <stages>
+            <li>
+                <label>all research finished</label>
+                <description>PLACEHOLDER</description>
+                <baseMoodEffect>10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

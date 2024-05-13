@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<IssueDef>
+		<defName>EBI_Biblioclasm</defName>
+		<label>biblioclasm</label>
+		<iconPath>UI/Issues/BookBurning</iconPath>
+	</IssueDef>
+
+	<PreceptDef>
+		<defName>EBI_Biblioclasm_Respected</defName>
+		<issue>EBI_Biblioclasm</issue>
+		<label>respected</label>
+		<description>PLACEHOLDER</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>10</displayOrderInIssue>
+		<displayOrderInImpact>100</displayOrderInImpact>
+		<defaultSelectionWeight>1</defaultSelectionWeight>
+		<comps>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>EB_DestroyedReligiousBook</eventDef>
+				<thought>EBI_DestroyedReligiousBook_Know_Respected</thought>
+			</li>
+			<li Class="PreceptComp_SelfTookMemoryThought">
+				<eventDef>EB_BookDestroyed</eventDef>
+				<thought>EBI_BookDestroyed_Respected</thought>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>EB_BookDestroyed</eventDef>
+				<thought>EBI_BookDestroyed_Know_Respected</thought>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<ThoughtDef>
+		<defName>EBI_DestroyedReligiousBook_Know_Respected</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>10</durationDays>
+		<stackLimit>100</stackLimit>
+		<stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>destroyed a religious book</label>
+				<description>PLACEHOLDER</description>
+				<baseOpinionOffset>5</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>EBI_BookDestroyed_Respected</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>3</durationDays>
+		<stackLimit>3</stackLimit>
+		<stages>
+			<li>
+				<label>I destroyed a religious book</label>
+				<description>PLACEHOLDER</description>
+				<baseMoodEffect>10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>EBI_BookDestroyed_Know_Respected</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>3</durationDays>
+		<stackLimit>3</stackLimit>
+		<stages>
+			<li>
+				<label>religious book destroyed</label>
+				<description>PLACEHOLDER</description>
+				<baseMoodEffect>10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<PreceptDef>
+		<defName>EBI_Biblioclasm_Approved</defName>
+		<issue>EBI_Biblioclasm</issue>
+		<label>approved</label>
+		<description>PLACEHOLDER</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>20</displayOrderInIssue>
+		<displayOrderInImpact>100</displayOrderInImpact>
+		<defaultSelectionWeight>1</defaultSelectionWeight>
+		<comps>
+			<li Class="PreceptComp_SelfTookMemoryThought">
+				<eventDef>EB_BookDestroyed</eventDef>
+				<thought>EBI_BookDestroyed_Approved</thought>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>EB_BookDestroyed</eventDef>
+				<thought>EBI_BookDestroyed_Know_Approved</thought>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<ThoughtDef>
+		<defName>EBI_BookDestroyed_Approved</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>3</durationDays>
+		<stackLimit>3</stackLimit>
+		<stages>
+			<li>
+				<label>I destroyed a religious book</label>
+				<description>PLACEHOLDER</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>EBI_BookDestroyed_Know_Approved</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>3</durationDays>
+		<stackLimit>3</stackLimit>
+		<stages>
+			<li>
+				<label>religious book destroyed</label>
+				<description>PLACEHOLDER</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+
+	</ThoughtDef>
+
+	<PreceptDef>
+		<defName>EBI_Biblioclasm_Neutral</defName>
+		<issue>EBI_Biblioclasm</issue>
+		<label>neutral</label>
+		<description>PLACEHOLDER</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>30</displayOrderInIssue>
+		<displayOrderInImpact>100</displayOrderInImpact>
+		<defaultSelectionWeight>1</defaultSelectionWeight>
+	</PreceptDef>
+
+	<PreceptDef>
+		<defName>EBI_Biblioclasm_Disapproved</defName>
+		<issue>EBI_Biblioclasm</issue>
+		<label>disapproved</label>
+		<description>PLACEHOLDER</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>40</displayOrderInIssue>
+		<displayOrderInImpact>100</displayOrderInImpact>
+		<defaultSelectionWeight>1</defaultSelectionWeight>
+		<comps>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>EB_DestroyedReligiousBook</eventDef>
+				<thought>EBI_DestroyedReligiousBook_Know_Disapproved</thought>
+			</li>
+			<li Class="PreceptComp_SelfTookMemoryThought">
+				<eventDef>EB_BookDestroyed</eventDef>
+				<thought>EBI_BookDestroyed_Disapproved</thought>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>EB_BookDestroyed</eventDef>
+				<thought>EBI_BookDestroyed_Know_Disapproved</thought>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<ThoughtDef>
+		<defName>EBI_DestroyedReligiousBook_Know_Disapproved</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>10</durationDays>
+		<stackLimit>100</stackLimit>
+		<stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>destroyed a religious book</label>
+				<description>PLACEHOLDER</description>
+				<baseOpinionOffset>-5</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>EBI_BookDestroyed_Disapproved</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>3</durationDays>
+		<stackLimit>3</stackLimit>
+		<stages>
+			<li>
+				<label>I destroyed a religious book</label>
+				<description>PLACEHOLDER</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>EBI_BookDestroyed_Know_Disapproved</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>3</durationDays>
+		<stackLimit>3</stackLimit>
+		<stages>
+			<li>
+				<label>religious book destroyed</label>
+				<description>PLACEHOLDER</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<PreceptDef>
+		<defName>EBI_Biblioclasm_Abhorrent</defName>
+		<issue>EBI_Biblioclasm</issue>
+		<label>abhorrent</label>
+		<description>PLACEHOLDER</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>40</displayOrderInIssue>
+		<displayOrderInImpact>100</displayOrderInImpact>
+		<defaultSelectionWeight>1</defaultSelectionWeight>
+		<comps>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>EB_DestroyedReligiousBook</eventDef>
+				<thought>EBI_DestroyedReligiousBook_Know_Abhorrent</thought>
+			</li>
+			<li Class="PreceptComp_SelfTookMemoryThought">
+				<eventDef>EB_BookDestroyed</eventDef>
+				<thought>EBI_BookDestroyed_Abhorrent</thought>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>EB_BookDestroyed</eventDef>
+				<thought>EBI_BookDestroyed_Know_Abhorrent</thought>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<ThoughtDef>
+		<defName>EBI_DestroyedReligiousBook_Know_Abhorrent</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>10</durationDays>
+		<stackLimit>100</stackLimit>
+		<stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>destroyed a religious book</label>
+				<description>PLACEHOLDER</description>
+				<baseOpinionOffset>-10</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>EBI_BookDestroyed_Abhorrent</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>3</durationDays>
+		<stackLimit>3</stackLimit>
+		<stages>
+			<li>
+				<label>I destroyed a religious book</label>
+				<description>PLACEHOLDER</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>EBI_BookDestroyed_Know_Abhorrent</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>3</durationDays>
+		<stackLimit>3</stackLimit>
+		<stages>
+			<li>
+				<label>religious book destroyed</label>
+				<description>PLACEHOLDER</description>
+				<baseMoodEffect>-7</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>

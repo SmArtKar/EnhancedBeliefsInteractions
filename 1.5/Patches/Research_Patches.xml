@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!--
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PreceptDef[defName="Research_ExtremelySlow"]/statFactors</xpath>
+		<value>
+			<statFactors>
+			  	<ResearchSpeed>0.4</ResearchSpeed>
+			</statFactors>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PreceptDef[defName="Research_VerySlow"]/statFactors</xpath>
+		<value>
+			<statFactors>
+			  	<ResearchSpeed>0.6</ResearchSpeed>
+			</statFactors>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PreceptDef[defName="Research_Slow"]/statFactors</xpath>
+		<value>
+			<statFactors>
+			  	<ResearchSpeed>0.8</ResearchSpeed>
+			</statFactors>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PreceptDef[defName="Research_Fast"]/statFactors</xpath>
+		<value>
+			<statFactors>
+			  	<ResearchSpeed>1.2</ResearchSpeed>
+			</statFactors>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PreceptDef[defName="Research_VeryFast"]/statFactors</xpath>
+		<value>
+			<statFactors>
+			  	<ResearchSpeed>1.4</ResearchSpeed>
+			</statFactors>
+		</value>
+	</Operation>
+
+	-->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PreceptDef[defName="Research_ExtremelySlow"]/label</xpath>
+		<value>
+			<label>Abhorrent</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PreceptDef[defName="Research_VerySlow"]/label</xpath>
+		<value>
+			<label>Horrible</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PreceptDef[defName="Research_Slow"]/label</xpath>
+		<value>
+			<label>Disapproved</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PreceptDef[defName="Research_Fast"]/label</xpath>
+		<value>
+			<label>Approved</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PreceptDef[defName="Research_VeryFast"]/label</xpath>
+		<value>
+			<label>Desired</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PreceptDef[defName="Research_ExtremelySlow"]</xpath>
+		<value>
+			<comps>
+				<li Class="PreceptComp_SituationalThought">
+					<thought>EBI_PawnResearching_Abhorrent</thought>
+					<description>Ongoing research</description>
+				</li>
+				<li Class="PreceptComp_SituationalThought">
+					<thought>EBI_Intellectual_Abhorrent_Social</thought>
+				</li>
+				<li Class="PreceptComp_SituationalThought">
+					<thought>EBI_NoOngoingResearch_Abhorrent</thought>
+				</li>
+				<li Class="EnhancedBeliefsInteractions.PreceptComp_SituationalThought_ResearchCompleted">
+					<thought>EBI_ResearchCompleted_Abhorrent</thought>
+				</li>
+			</comps>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PreceptDef[defName="Research_VerySlow"]</xpath>
+		<value>
+			<comps>
+				<li Class="PreceptComp_SituationalThought">
+					<thought>EBI_PawnResearching_Horrible</thought>
+					<description>Ongoing research</description>
+				</li>
+				<li Class="PreceptComp_SituationalThought">
+					<thought>EBI_Intellectual_Horrible_Social</thought>
+				</li>
+				<li Class="PreceptComp_SituationalThought">
+					<thought>EBI_NoOngoingResearch_Horrible</thought>
+				</li>
+				<li Class="EnhancedBeliefsInteractions.PreceptComp_SituationalThought_ResearchCompleted">
+					<thought>EBI_ResearchCompleted_Horrible</thought>
+				</li>
+			</comps>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PreceptDef[defName="Research_Slow"]</xpath>
+		<value>
+			<comps>
+				<li Class="PreceptComp_SituationalThought">
+					<thought>EBI_PawnResearching_Disapproved</thought>
+					<description>Ongoing research</description>
+				</li>
+				<li Class="PreceptComp_SituationalThought">
+					<thought>EBI_Intellectual_Disapproved_Social</thought>
+				</li>
+				<li Class="PreceptComp_SituationalThought">
+					<thought>EBI_NoOngoingResearch_Disapproved</thought>
+				</li>
+				<li Class="EnhancedBeliefsInteractions.PreceptComp_SituationalThought_ResearchCompleted">
+					<thought>EBI_ResearchCompleted_Disapproved</thought>
+				</li>
+			</comps>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PreceptDef[defName="Research_Fast"]</xpath>
+		<value>
+			<comps>
+				<li Class="PreceptComp_SituationalThought">
+					<thought>EBI_PawnResearching_Approved</thought>
+					<description>Ongoing research</description>
+				</li>
+				<li Class="PreceptComp_SituationalThought">
+					<thought>EBI_Intellectual_Approved_Social</thought>
+				</li>
+				<li Class="PreceptComp_SituationalThought">
+					<thought>EBI_NoOngoingResearch_Approved</thought>
+				</li>
+				<li Class="EnhancedBeliefsInteractions.PreceptComp_SituationalThought_ResearchCompleted">
+					<thought>EBI_ResearchCompleted_Approved</thought>
+				</li>
+			</comps>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PreceptDef[defName="Research_VeryFast"]</xpath>
+		<value>
+			<comps>
+				<li Class="PreceptComp_SituationalThought">
+					<thought>EBI_PawnResearching_Desired</thought>
+					<description>Ongoing research</description>
+				</li>
+				<li Class="PreceptComp_SituationalThought">
+					<thought>EBI_Intellectual_Desired_Social</thought>
+				</li>
+				<li Class="PreceptComp_SituationalThought">
+					<thought>EBI_NoOngoingResearch_Desired</thought>
+				</li>
+				<li Class="EnhancedBeliefsInteractions.PreceptComp_SituationalThought_ResearchCompleted">
+					<thought>EBI_ResearchCompleted_Desired</thought>
+				</li>
+			</comps>
+		</value>
+	</Operation>
+	
+</Patch>

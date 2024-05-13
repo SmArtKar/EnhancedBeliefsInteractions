@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<MemeDef>
+		<defName>EBI_Zealots</defName>
+		<label>zealot</label>
+		<description>Our faith is absolute, and our principles are unshakeable. All those who claim
+			otherwise must atone or perish.</description>
+		<iconPath>UI/Memes/Zealots</iconPath>
+		<groupDef>Misc</groupDef>
+		<impact>2</impact>
+		<renderOrder>71</renderOrder>
+		<consumableBuildings>
+			<li>Effigy</li>
+		</consumableBuildings>
+		<requireOne>
+			<li>
+				<li>IdeoDiversity_Abhorrent</li>
+			</li>
+			<li>
+				<li>EBI_Zealots</li>
+			</li>
+			<li>
+				<li>Execution_RespectedIfGuilty</li>
+				<li>Execution_Required</li>
+			</li>
+			<li>
+				<li>Apostasy_Abhorrent</li>
+				<li>Apostasy_Horrible</li>
+			</li>
+		</requireOne>
+		<generalRules>
+			<rulesStrings>
+				<li>memeAdjective->zealous</li>
+				<li>memeConcept->zealotry</li>
+				<li>memeConcept->cleansing</li>
+				<li>memeConcept->purging</li>
+				<li>memeConcept->crusade</li>
+				<li>memeConcept->purity</li>
+				<li></li>
+			</rulesStrings>
+		</generalRules>
+		<symbolPacks>
+			<li>
+				<ideoName>Crusaderism</ideoName>
+				<theme>crusading</theme>
+				<adjective>crusader</adjective>
+				<member>crusader</member>
+			</li>
+			<li>
+				<ideoName>Puritism</ideoName>
+				<theme>purifying</theme>
+				<adjective>pure</adjective>
+				<member>purifier</member>
+			</li>
+			<li>
+				<ideoName>Zealotism</ideoName>
+				<theme>zealotry</theme>
+				<adjective>zealous</adjective>
+				<member>zealot</member>
+			</li>
+			<li>
+				<ideoName>Purging</ideoName>
+				<theme>purging</theme>
+				<adjective>purgic</adjective>
+				<member>purger</member>
+			</li>
+		</symbolPacks>
+		<descriptionMaker>
+		  <rules>
+			<rulesStrings>
+			  <!-- theist myth -->
+			  <li>creation(tag=meme_Supremacist)        ->The people of the [place_summary] [place_name] squabbled endlessly, and [deity0_name] became tired of discord and anointed the [memberNamePlural] as the rightful rulers of all.</li>
+			  <li>episode(uses=1,tag=meme_Supremacist)  ->The faithful fought the unbelievers, and [deity0_name] said, "Fight them, everywhere, in my name, until I am worshipped throughout the universe and the true peace may finally reign."</li>
+			  <!-- theist founder -->
+			  <li>intro(tag=meme_Supremacist)           ->The people of the [place_summary] [place_name] worshipped [deity0_name]. [deity0_pronoun] saw that they were suited for [memeConcept], and ordained that these worshippers would rule above all others.</li>
+			  <li>conflict(tag=meme_Supremacist)        ->A [foeLeader] passed a law forbidding [memberNamePlural] from rising to the ruling classes of [place_name].</li>
+			  <li>founderJoin(tag=meme_Supremacist)     ->A warrior named [founderName] used [place_massWeapon] to destroy a [place_community]. [deity0_name] saw [founderName]'s ruthlessness and anointed [founder_objective] the rightful ruler of all humanity.</li>
+			  <li>victory(tag=meme_Supremacist)         ->[founderName] destroyed the capital of [place_name] with [place_massWeapon], killing the [foeLeader]. [founder_pronoun] took [founder_possessive] place as ruler of [place_name] - and the universe beyond.</li>
+			  <!-- ideological founder -->
+			  <li>setup(tag=meme_Supremacist)           ->[founderName] built an army that spread [founder_possessive] power and glory across the land, placing those who refused to follow rightly under [founder_possessive] rule.</li>
+			  <li>story(uses=1,tag=meme_Supremacist)    ->[founderName] instructed all outsiders to submit. When the first city refused, [founder_pronoun] used [place_massWeapon] to kill everyone inside.</li>
+			  <!-- ideological lesson -->
+			  <li>lessonIntro(tag=meme_Supremacist)         ->I looked at this [foeLeader], with [foeLeader_possessive] pitiful [foeSoldiers], all that power left fallow. I tried to convince [foeLeader_objective] that</li>
+			  <li>lesson(tag=meme_Supremacist)              ->we've long since proven that we have the strength to rightfully rule this universe</li>
+			  <li>lessonReinforcement(tag=meme_Supremacist) ->That's why we're proud to express the strength of our hearts using the heels of our boots.</li>
+			  <!-- archist -->
+			  <li>archistBasis(tag=meme_Supremacist)    ->It took the most superior humans to create the archotechs, so that the archotechs could become superior to all.</li>
+			  <li>archistFact(tag=meme_Supremacist)     ->The archotechs rightfully look down on us, as we look down on our inferiors.</li>
+			  <li>archistProphecy(tag=meme_Supremacist) ->The archotechs will only take us to join them when we finally rule over all others.</li>
+			  <!-- animist -->
+			  <li>animistFact(tag=meme_Supremacist)     ->Powerful spirits decide who is fit to rule, and lend power to those who subjugate others.</li>
+			  <li>animistProphecy(tag=meme_Supremacist) ->[itIsSaid] that a new order will be created when one supreme ruler commands all of humanity.</li>
+			</rulesStrings>
+		  </rules>
+		</descriptionMaker>
+	</MemeDef>
+
+	<ThoughtDef>
+		<defName>EBI_Zealots</defName>
+		<stackLimit>10</stackLimit>
+		<workerClass>EnhancedBeliefsInteractions.ThoughtWorker_Precept_Zealots</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<nullifyingHediffs>
+			<li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
+		</nullifyingHediffs>
+		<stages>
+			<li>
+				<label>heretics imprisoned</label>
+				<description>PLACEHOLDER</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<IssueDef>
+		<defName>EBI_Zealots</defName>
+		<label>heretics</label>
+		<iconPath>UI/Issues/Zealots</iconPath>
+	</IssueDef>
+
+	<!-- Precepts -->
+	<PreceptDef>
+		<defName>EBI_Zealots</defName>
+		<issue>EBI_Zealots</issue>
+		<label>abhorrent</label>
+		<description>All heretics must either atone or perish.</description>
+		<impact>Medium</impact>
+		<displayOrderInImpact>100</displayOrderInImpact>
+		<defaultSelectionWeight>0</defaultSelectionWeight>
+
+		<requiredMemes>
+			<li>EBI_Zealots</li>
+		</requiredMemes>
+
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>EBI_Zealots</thought>
+				<description>heretics imprisoned</description>
+			</li>
+		</comps>
+	</PreceptDef>
+
+</Defs>
