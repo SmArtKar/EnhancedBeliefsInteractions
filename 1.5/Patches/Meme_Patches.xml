@@ -18,4 +18,30 @@
 		</value>
 	</Operation>
 
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+		<xpath>/Defs/PreceptDef[defName="Darklight_Preferred"]/requiredMemes</xpath>
+		<value>
+			<requiredMemes>
+			  <li>Darkness</li>
+			  <li>Tunneler</li>
+			</requiredMemes>
+		</value>
+	</Operation>
+
+    <Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PreceptDef[defName="Darklight_Preferred"]/associatedMemes</xpath>
+		<value>
+			<li>Tunneler</li>
+		</value>
+	</Operation>
+
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+		<xpath>/Defs/PreceptDef[defName="DarknessCombat_Preferred" or defName="Eclipse_Beautiful"]/requiredMemes</xpath>
+		<value>
+			<requiredMemes>
+			  <li>Darkness</li>
+			</requiredMemes>
+		</value>
+	</Operation>
+
 </Patch>

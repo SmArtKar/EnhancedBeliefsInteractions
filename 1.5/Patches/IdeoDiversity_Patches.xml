@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-	<Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrReplace">
+	<Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
 		<xpath>/Defs/PreceptDef[defName="IdeoDiversity_Abhorrent"]/comps</xpath>
 		<value>
 			<comps>
@@ -12,7 +12,7 @@
 		</value>
 	</Operation>
 
-	<Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrReplace">
+	<Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
 		<xpath>/Defs/PreceptDef[defName="IdeoDiversity_Horrible"]/comps</xpath>
 		<value>
 			<comps>
@@ -23,7 +23,7 @@
 		</value>
 	</Operation>
 
-	<Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrReplace">
+	<Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
 		<xpath>/Defs/PreceptDef[defName="IdeoDiversity_Disapproved"]/comps</xpath>
 		<value>
 			<comps>

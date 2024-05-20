@@ -8,7 +8,7 @@ using Verse;
 
 namespace EnhancedBeliefsInteractions
 {
-    public class PatchOperationAddOrReplace : PatchOperationAdd
+    public class PatchOperationAddOrInsert : PatchOperationAdd
     {
         public override bool ApplyWorker(XmlDocument xml)
         {
@@ -19,19 +19,16 @@ namespace EnhancedBeliefsInteractions
 
             if (array.Any())
             {
-                foreach (XmlNode xmlNode in array)
+                result = true;
+
+                foreach (XmlNode childNode in node.ChildNodes[0].ChildNodes)
                 {
-                    result = true;
-                    XmlNode parentNode = xmlNode.ParentNode;
-                    foreach (XmlNode childNode in node.ChildNodes)
-                    {
-                        parentNode.InsertBefore(parentNode.OwnerDocument.ImportNode(childNode, deep: true), xmlNode);
-                    }
-                    parentNode.RemoveChild(xmlNode);
+                    array[0].AppendChild(array[0].OwnerDocument.ImportNode(childNode, deep: true));
                 }
 
                 return result;
             }
+
             xpath = xpath.Substring(0, xpath.LastIndexOf("/"));
             foreach (object item in xml.SelectNodes(xpath))
             {

@@ -85,7 +85,7 @@
 		</value>
 	</Operation>
 
-	<Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrReplace">
+	<Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
 		<xpath>/Defs/PreceptDef[defName="Research_ExtremelySlow" or defName="Research_None"]/comps</xpath>
 		<value>
 			<comps>
@@ -107,7 +107,7 @@
 		</value>
 	</Operation>
 
-	<Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrReplace">
+	<Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
 		<xpath>/Defs/PreceptDef[defName="Research_VerySlow"]/comps</xpath>
 		<value>
 			<comps>
@@ -129,7 +129,7 @@
 		</value>
 	</Operation>
 
-	<Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrReplace">
+	<Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
 		<xpath>/Defs/PreceptDef[defName="Research_Slow"]/comps</xpath>
 		<value>
 			<comps>
@@ -151,7 +151,7 @@
 		</value>
 	</Operation>
 
-	<Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrReplace">
+	<Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
 		<xpath>/Defs/PreceptDef[defName="Research_Fast"]/comps</xpath>
 		<value>
 			<comps>
@@ -173,7 +173,7 @@
 		</value>
 	</Operation>
 
-	<Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrReplace">
+	<Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
 		<xpath>/Defs/PreceptDef[defName="Research_VeryFast"]/comps</xpath>
 		<value>
 			<comps>

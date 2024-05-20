@@ -1,4 +1,353 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+        <xpath>/Defs/PreceptDef[defName="Blindness_Respected" or defName="Blindness_Elevated" or
+            defName="Blindness_Sublime"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+                    <agreeableTraits>
+                        <li>Masochist</li>
+                        <li>Ascetic</li>
+                    </agreeableTraits>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+        <xpath>/Defs/PreceptDef[defName="Cannibalism_Acceptable" or defName="Cannibalism_Preferred"
+            or "Cannibalism_RequiredStrong" or defName="Cannibalism_RequiredRavenous"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+                    <agreeableTraits>
+                        <li>Cannibal</li>
+                        <li>Bloodlust</li>
+                    </agreeableTraits>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+        <xpath>/Defs/PreceptDef[defName="Corpses_DontCare"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+                    <agreeableTraits>
+                        <li>Cannibal</li>
+                        <li>Bloodlust</li>
+                        <li>Psychopath</li>
+                    </agreeableTraits>
+                    <disagreeableTraits>
+                        <li>Kind</li>
+                        <li>Wimp</li>
+                    </disagreeableTraits>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+        <xpath>/Defs/PreceptDef[defName="NutrientPasteEating_DontMind"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+                    <agreeableTraits>
+                        <li>Ascetic</li>
+                        <Immunity>-1</Immunity> <!-- Sickly trait. I mean, they can't get food
+                        poisoning like that... -->
+                    </agreeableTraits>
+                    <disagreeableTraits>
+                        <li>Gourmand</li>
+                        <li>Greedy</li>
+                        <li>Cannibal</li>
+                    </disagreeableTraits>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+        <xpath>/Defs/PreceptDef[defName="Execution_RespectedIfGuilty" or
+            defName="Execution_Required"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+                    <agreeableTraits>
+                        <li>Bloodlust</li>
+                        <li>Psychopath</li>
+                    </agreeableTraits>
+                    <disagreeableTraits>
+                        <li>Kind</li>
+                        <li>Wimp</li>
+                    </disagreeableTraits>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+        <xpath>/Defs/PreceptDef[defName="FungusEating_Preferred"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+                    <agreeableTraits>
+                        <li>Undergrounder</li>
+                    </agreeableTraits>
+                    <disagreeableTraits>
+                        <li>Cannibal</li>
+                    </disagreeableTraits>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+        <xpath>/Defs/PreceptDef[defName="FungusEating_Despised"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+                    <agreeableTraits>
+                        <li>Cannibal</li>
+                    </agreeableTraits>
+                    <disagreeableTraits>
+                        <li>Undergrounder</li>
+                    </disagreeableTraits>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+        <xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+                    <agreeableTraits>
+                        <li>Undergrounder</li>
+                    </agreeableTraits>
+                    <disagreeableTraits>
+                        <li>Cannibal</li>
+                        <Immunity>-1</Immunity> <!-- Sickly trait -->
+                        <li>Gourmand</li>
+                    </disagreeableTraits>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+        <xpath>/Defs/PreceptDef[defName="InsectMeatEating_Despised_Classic"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+                    <agreeableTraits>
+                        <li>Cannibal</li>
+                        <li>Gourmand</li>
+                        <Immunity>-1</Immunity> <!-- Sickly trait -->
+                    </agreeableTraits>
+                    <disagreeableTraits>
+                        <li>Undergrounder</li>
+                    </disagreeableTraits>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+        <xpath>/Defs/PreceptDef[defName="MarriageName_UsuallyMans" or
+            defName="MarriageName_AlwaysMans" or defName="Nudity_Female_Mandatory" or
+            defName="Nudity_Female_UncoveredGroinChestHairOrFaceDisapproved"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+                    <agreeableTraits>
+                        <li>DislikesWomen</li>
+                    </agreeableTraits>
+                    <disagreeableTraits>
+                        <li>DislikesMen</li>
+                    </disagreeableTraits>
+                    <opinionPerTrait>5</opinionPerTrait>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+        <xpath>/Defs/PreceptDef[defName="MarriageName_UsuallyWomans" or
+            defName="MarriageName_AlwaysWomans" or defName="Nudity_Male_Mandatory" or
+            defName="Nudity_Male_UncoveredGroinChestHairOrFaceDisapproved"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+                    <agreeableTraits>
+                        <li>DislikesMen</li>
+                    </agreeableTraits>
+                    <disagreeableTraits>
+                        <li>DislikesWomen</li>
+                    </disagreeableTraits>
+                    <opinionPerTrait>5</opinionPerTrait>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+        <xpath>/Defs/PreceptDef[defName="OrganUse_Abhorrent" or
+            defName="OrganUse_HorribleNoSell"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+                    <agreeableTraits>
+                        <li>BodyPurist</li>
+                    </agreeableTraits>
+                    <disagreeableTraits>
+                        <li>Transhumanist</li>
+                    </disagreeableTraits>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+        <xpath>/Defs/PreceptDef[defName="Research_None" or defName="Research_ExtremelySlow" or
+            defName="Research_VerySlow" or defName="Research_Slow"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+                    <agreeableTraits>
+                        <li>Ascetic</li>
+                        <li>BodyPurist</li>
+                        <li>SlowLearner</li>
+                    </agreeableTraits>
+                    <disagreeableTraits>
+                        <li>Transhumanist</li>
+                        <li>TooSmart</li>
+                        <li>FastLearner</li>
+                        <li>GreatMemory</li>
+                    </disagreeableTraits>
+                    <opinionPerTrait>5</opinionPerTrait>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+        <xpath>/Defs/PreceptDef[defName="Research_Fast" or defName="Research_VeryFast"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+                    <agreeableTraits>
+                        <li>Transhumanist</li>
+                        <li>TooSmart</li>
+                        <li>FastLearner</li>
+                        <li>GreatMemory</li>
+                    </agreeableTraits>
+                    <disagreeableTraits>
+                        <li>SlowLearner</li>
+                    </disagreeableTraits>
+                    <opinionPerTrait>3</opinionPerTrait>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+        <xpath>/Defs/PreceptDef[defName="Scarification_Minor" or defName="Scarification_Heavy" or
+            defName="Scarification_Extreme"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+                    <agreeableTraits>
+                        <li>Masochist</li>
+                        <li>Ascetic</li>
+                    </agreeableTraits>
+                    <disagreeableTraits>
+                        <li>Wimp</li>
+                    </disagreeableTraits>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+        <xpath>/Defs/PreceptDef[defName="Skullspike_Desired"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+                    <agreeableTraits>
+                        <li>Bloodlust</li>
+                        <li>Psychopath</li>
+                    </agreeableTraits>
+                    <disagreeableTraits>
+                        <li>Wimp</li>
+                    </disagreeableTraits>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+        <xpath>/Defs/PreceptDef[defName="Slavery_Acceptable" or defName="Slavery_Honorable"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+                    <disagreeableTraits>
+                        <li>Kind</li>
+                    </disagreeableTraits>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+        <xpath>/Defs/PreceptDef[defName="SpouseCount_Male_MaxTwo" or defName="SpouseCount_Male_MaxThree" or defName="SpouseCount_Male_MaxFour" or defName="SpouseCount_Male_Unlimited"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+                    <agreeableTraits>
+                        <li>DislikesWomen</li>
+                    </agreeableTraits>
+                    <disagreeableTraits>
+                        <li>DislikesMen</li>
+                    </disagreeableTraits>
+                    <opinionPerTrait>5</opinionPerTrait>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+        <xpath>/Defs/PreceptDef[defName="SpouseCount_Female_MaxTwo" or defName="SpouseCount_Female_MaxThree" or defName="SpouseCount_Female_MaxFour" or defName="SpouseCount_Female_Unlimited"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+                    <agreeableTraits>
+                        <li>DislikesMen</li>
+                    </agreeableTraits>
+                    <disagreeableTraits>
+                        <li>DislikesWomen</li>
+                    </disagreeableTraits>
+                    <opinionPerTrait>5</opinionPerTrait>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrInsert">
+        <xpath>/Defs/PreceptDef[defName="AnimalSlaughter_Prohibited" or defName="AnimalSlaughter_Horrible" or defName="AnimalSlaughter_Disapproved"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="EnhancedBeliefs.PreceptComp_OpinionOffset">
+                    <agreeableTraits>
+                        <li>Kind</li>
+                    </agreeableTraits>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
 </Patch>

@@ -59,7 +59,7 @@
     <Compile Include="HarmonyPatches_Fluid.cs" />
     <Compile Include="HarmonyPatches_Misc.cs" />
     <Compile Include="IdeoSchismUtility.cs" />
-    <Compile Include="PatchOperationAddOrReplace.cs" />
+    <Compile Include="PatchOperationAddOrInsert.cs" />
     <Compile Include="PreceptComp_SituationalThought_ResearchCompleted.cs" />
     <Compile Include="ThoughtWorker_Precept_AllResearchFinished.cs" />
     <Compile Include="ThoughtWorker_Precept_ResearchTooSlow.cs" />
