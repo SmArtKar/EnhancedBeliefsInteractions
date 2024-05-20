@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Ideology Expanded - Memes and Structures</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+                    <xpath>/Defs/MemeDef[defName="VME_ViolentConversion"]/requireOne</xpath>
+                    <value>
+                        <li>
+                            <li>EBI_Biblioclasm_Respected</li>
+                        </li>
+                    </value>
+				</li>
+				<li Class="PatchOperationAdd">
+                    <xpath>/Defs/MemeDef[defName="VME_Nationalist"]/requireOne</xpath>
+                    <value>
+                        <li>
+                            <li>EBI_Biblioclasm_Respected</li>
+                            <li>EBI_Biblioclasm_Approved</li>
+                            <li>EBI_Biblioclasm_Neutral</li>
+                        </li>
+                    </value>
+				</li>
+				<li Class="PatchOperationAdd">
+                    <xpath>/Defs/MemeDef[defName="VME_Egalitarian"]/requireOne</xpath>
+                    <value>
+                        <li>
+                            <li>EBI_Biblioclasm_Disapproved</li>
+                            <li>EBI_Biblioclasm_Abhorrent</li>
+                        </li>
+                    </value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

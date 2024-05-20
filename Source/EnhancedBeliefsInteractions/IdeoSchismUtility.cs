@@ -25,11 +25,6 @@ namespace EnhancedBeliefsInteractions
             }
 
             List<Pawn> schismPawns = PickSchismPawns(ideo, believers);
-            Log.Message(schismPawns.Count);
-            for (int i = 0; i < schismPawns.Count; i++)
-            {
-                Log.Message(schismPawns[i]);
-            }
 
             if (schismPawns.Count < 3)
             {
@@ -45,7 +40,7 @@ namespace EnhancedBeliefsInteractions
             newIdeo.foundation.GenerateLeaderTitle();
             newIdeo.foundation.RandomizeIcon();
 
-            GenerateMemesAndPrecepts(newIdeo, ideo, schismPawns);
+            GenerateMemesAndPrecepts(newIdeo, ideo, schismPawns, out StringBuilder ideoChanges);
             newIdeo.foundation.InitPrecepts(parms);
             newIdeo.RecachePrecepts();
 
@@ -63,6 +58,15 @@ namespace EnhancedBeliefsInteractions
             {
                 schismPawns[i].ideo.SetIdeo(newIdeo);
             }
+
+            Find.FactionManager.OfPlayer.ideos.RecalculateIdeosBasedOnPlayerPawns();
+
+            Find.WindowStack.Add(new Window_SchismReport
+            {
+                newIdeo = newIdeo,
+                newMembers = schismPawns,
+                ideoChanges = ideoChanges
+            });
         }
 
         public static List<Pawn> PickSchismPawns(Ideo ideo, List<Pawn> believers)
@@ -156,9 +160,10 @@ namespace EnhancedBeliefsInteractions
             TryCauseSchism(Faction.OfPlayer.ideos.PrimaryIdeo);
         }
 
-        public static void GenerateMemesAndPrecepts(Ideo ideo, Ideo oldIdeo, List<Pawn> pawns)
+        public static void GenerateMemesAndPrecepts(Ideo ideo, Ideo oldIdeo, List<Pawn> pawns, out StringBuilder ideoChanges)
         {
             GameComponent_EnhancedBeliefs comp = Current.Game.GetComponent<GameComponent_EnhancedBeliefs>();
+            ideoChanges = new StringBuilder();
 
             List<MemeDef> validMemes = new List<MemeDef>();
             List<PreceptDef> validPrecepts = new List<PreceptDef>();
@@ -224,12 +229,14 @@ namespace EnhancedBeliefsInteractions
 
                     if (memeOpinions[toRemove] < memeOpinions[bestMeme])
                     {
+                        ideoChanges.AppendLine("Meme changed: {0} -> {1}".Formatted(toRemove.LabelCap, bestMeme.LabelCap));
                         ideo.memes.Remove(toRemove);
                         ideo.memes.Add(bestMeme);
                     }
                 }
                 else
                 {
+                    ideoChanges.AppendLine("New meme added: " + bestMeme.LabelCap);
                     ideo.memes.Add(bestMeme);
                 }
             }
@@ -283,7 +290,14 @@ namespace EnhancedBeliefsInteractions
                     weightTotal += Math.Max(0f, issues[issue].First[j].Value + (deductOpinion < 0 ? -deductOpinion : 0));
                 }
 
-                issues[issue] = new Pair<List<KeyValuePair<PreceptDef, float>>, float[]>(issues[issue].First, [(issues[issue].First[0].Value - deductOpinion) / (impactWeight / weightTotal), deductOpinion]);
+                float impactDivider = Math.Max((impactWeight / weightTotal), 1f);
+
+                if (float.IsNaN(impactDivider))
+                {
+                    impactDivider = 1f;
+                }
+
+                issues[issue] = new Pair<List<KeyValuePair<PreceptDef, float>>, float[]>(issues[issue].First, [(issues[issue].First[0].Value - deductOpinion) / impactDivider, deductOpinion]);
             }
 
             List<KeyValuePair<IssueDef, Pair<List<KeyValuePair<PreceptDef, float>>, float[]>>> sortedIssues = issues.Where((KeyValuePair<IssueDef, Pair<List<KeyValuePair<PreceptDef, float>>, float[]>> x) => x.Value.Second[0] > 0f).ToList();
@@ -298,6 +312,7 @@ namespace EnhancedBeliefsInteractions
                 PreceptDef newPrecept = possiblePrecepts.RandomElementByWeight((KeyValuePair<PreceptDef, float> x) => x.Value + (pickedIssue.Value.Second[1] < 0 ? -pickedIssue.Value.Second[1] : 0)).Key;
 
                 bool samePrecept = false;
+                string removedPrecept = null;
 
                 for (int j = 0; j < ideo.precepts.Count; j++)
                 {
@@ -309,8 +324,9 @@ namespace EnhancedBeliefsInteractions
                         break;
                     }
 
-                    if (precept2.def.issue == sortedIssues[i].Key)
+                    if (precept2.def.issue == pickedIssue.Key)
                     {
+                        removedPrecept = precept2.TipLabel;
                         ideo.RemovePrecept(precept2, true);
                         break;
                     }
@@ -321,7 +337,18 @@ namespace EnhancedBeliefsInteractions
                     continue;
                 }
 
-                ideo.AddPrecept(PreceptMaker.MakePrecept(newPrecept), init: true);
+                Precept precept = PreceptMaker.MakePrecept(newPrecept);
+
+                if (removedPrecept != null)
+                {
+                    ideoChanges.AppendLine("Precept changed: {0} -> {1}".Formatted(removedPrecept, precept.TipLabel));
+                }
+                else
+                {
+                    ideoChanges.AppendLine("New precept added: " + precept.TipLabel);
+                }
+
+                ideo.AddPrecept(precept, init: true);
                 ideo.anyPreceptEdited = true;
             }
 

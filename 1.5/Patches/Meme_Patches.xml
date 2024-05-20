@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/MemeDef[defName="Supremacist"]/requireOne</xpath>
+		<value>
+            <li>
+                <li>EBI_Biblioclasm_Respected</li>
+                <li>EBI_Biblioclasm_Approved</li>
+            </li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/GoodwillSituationDef[defName="Supremacist_All" or defName="Raider_All" or defName="Loyalist_All"]/workerClass</xpath>
+		<value>
+			<workerClass>EnhancedBeliefsInteractions.GoodwillSituationWorker_SupremacyMeme</workerClass>
+		</value>
+	</Operation>
+
+</Patch>

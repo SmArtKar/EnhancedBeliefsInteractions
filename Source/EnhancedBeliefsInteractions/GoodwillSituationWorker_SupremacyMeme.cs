@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace EnhancedBeliefsInteractions
 {
@@ -16,7 +17,7 @@ namespace EnhancedBeliefsInteractions
                 return 0;
             }
 
-            return (int)(def.naturalGoodwillOffset * (1f - 0.2f * SharedMemes(other)));
+            return (int)(def.naturalGoodwillOffset * Mathf.Clamp01(1f - 0.2f * SharedMemes(other)));
         }
 
         public int SharedMemes(Faction other)

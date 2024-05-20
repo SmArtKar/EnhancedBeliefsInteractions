@@ -85,8 +85,8 @@
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/PreceptDef[defName="Research_ExtremelySlow"]</xpath>
+	<Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrReplace">
+		<xpath>/Defs/PreceptDef[defName="Research_ExtremelySlow" or defName="Research_None"]/comps</xpath>
 		<value>
 			<comps>
 				<li Class="PreceptComp_SituationalThought">
@@ -99,15 +99,16 @@
 				<li Class="PreceptComp_SituationalThought">
 					<thought>EBI_NoOngoingResearch_Abhorrent</thought>
 				</li>
-				<li Class="EnhancedBeliefsInteractions.PreceptComp_SituationalThought_ResearchCompleted">
+				<li
+					Class="EnhancedBeliefsInteractions.PreceptComp_SituationalThought_ResearchCompleted">
 					<thought>EBI_ResearchCompleted_Abhorrent</thought>
 				</li>
 			</comps>
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/PreceptDef[defName="Research_VerySlow"]</xpath>
+	<Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrReplace">
+		<xpath>/Defs/PreceptDef[defName="Research_VerySlow"]/comps</xpath>
 		<value>
 			<comps>
 				<li Class="PreceptComp_SituationalThought">
@@ -120,15 +121,16 @@
 				<li Class="PreceptComp_SituationalThought">
 					<thought>EBI_NoOngoingResearch_Horrible</thought>
 				</li>
-				<li Class="EnhancedBeliefsInteractions.PreceptComp_SituationalThought_ResearchCompleted">
+				<li
+					Class="EnhancedBeliefsInteractions.PreceptComp_SituationalThought_ResearchCompleted">
 					<thought>EBI_ResearchCompleted_Horrible</thought>
 				</li>
 			</comps>
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/PreceptDef[defName="Research_Slow"]</xpath>
+	<Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrReplace">
+		<xpath>/Defs/PreceptDef[defName="Research_Slow"]/comps</xpath>
 		<value>
 			<comps>
 				<li Class="PreceptComp_SituationalThought">
@@ -141,15 +143,16 @@
 				<li Class="PreceptComp_SituationalThought">
 					<thought>EBI_NoOngoingResearch_Disapproved</thought>
 				</li>
-				<li Class="EnhancedBeliefsInteractions.PreceptComp_SituationalThought_ResearchCompleted">
+				<li
+					Class="EnhancedBeliefsInteractions.PreceptComp_SituationalThought_ResearchCompleted">
 					<thought>EBI_ResearchCompleted_Disapproved</thought>
 				</li>
 			</comps>
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/PreceptDef[defName="Research_Fast"]</xpath>
+	<Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrReplace">
+		<xpath>/Defs/PreceptDef[defName="Research_Fast"]/comps</xpath>
 		<value>
 			<comps>
 				<li Class="PreceptComp_SituationalThought">
@@ -162,15 +165,16 @@
 				<li Class="PreceptComp_SituationalThought">
 					<thought>EBI_NoOngoingResearch_Approved</thought>
 				</li>
-				<li Class="EnhancedBeliefsInteractions.PreceptComp_SituationalThought_ResearchCompleted">
+				<li
+					Class="EnhancedBeliefsInteractions.PreceptComp_SituationalThought_ResearchCompleted">
 					<thought>EBI_ResearchCompleted_Approved</thought>
 				</li>
 			</comps>
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/PreceptDef[defName="Research_VeryFast"]</xpath>
+	<Operation Class="EnhancedBeliefsInteractions.PatchOperationAddOrReplace">
+		<xpath>/Defs/PreceptDef[defName="Research_VeryFast"]/comps</xpath>
 		<value>
 			<comps>
 				<li Class="PreceptComp_SituationalThought">
@@ -183,11 +187,12 @@
 				<li Class="PreceptComp_SituationalThought">
 					<thought>EBI_NoOngoingResearch_Desired</thought>
 				</li>
-				<li Class="EnhancedBeliefsInteractions.PreceptComp_SituationalThought_ResearchCompleted">
+				<li
+					Class="EnhancedBeliefsInteractions.PreceptComp_SituationalThought_ResearchCompleted">
 					<thought>EBI_ResearchCompleted_Desired</thought>
 				</li>
 			</comps>
 		</value>
 	</Operation>
-	
+
 </Patch>

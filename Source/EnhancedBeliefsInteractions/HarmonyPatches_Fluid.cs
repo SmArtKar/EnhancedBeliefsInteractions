@@ -584,7 +584,14 @@ namespace EnhancedBeliefsInteractions
                     weightTotal += Math.Max(0f, issues[issue].First[j].Value + (deductOpinion < 0 ? -deductOpinion : 0));
                 }
 
-                issues[issue] = new Pair<List<KeyValuePair<PreceptDef, float>>, float[]>(issues[issue].First, [(issues[issue].First[0].Value - deductOpinion) / (impactWeight / weightTotal), deductOpinion]);
+                float impactDivider = Math.Max((impactWeight / weightTotal), 1f);
+
+                if (float.IsNaN(impactDivider))
+                {
+                    impactDivider = 1f;
+                }
+
+                issues[issue] = new Pair<List<KeyValuePair<PreceptDef, float>>, float[]>(issues[issue].First, [(issues[issue].First[0].Value - deductOpinion) / impactDivider, deductOpinion]);
             }
 
             List<KeyValuePair<IssueDef, Pair<List<KeyValuePair<PreceptDef, float>>, float[]>>> sortedIssues = issues.Where((KeyValuePair<IssueDef, Pair<List<KeyValuePair<PreceptDef, float>>, float[]>> x) => x.Value.Second[0] > 0f).ToList();
@@ -610,7 +617,7 @@ namespace EnhancedBeliefsInteractions
                         break;
                     }
 
-                    if (precept2.def.issue == sortedIssues[i].Key)
+                    if (precept2.def.issue == pickedIssue.Key)
                     {
                         newIdeo.RemovePrecept(precept2, true);
                         break;

@@ -19,7 +19,7 @@ public static class EBIDefOf
     }
 }
 
-namespace EnhancedBeliefs
+namespace EnhancedBeliefsInteractions
 {
     public class EBInteractionsSettings : ModSettings
     {
